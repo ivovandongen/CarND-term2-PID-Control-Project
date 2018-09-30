@@ -1,9 +1,10 @@
 # Submodules
-include(${CMAKE_SOURCE_DIR}/deps/eigen.cmake)
+include(${CMAKE_SOURCE_DIR}/deps/uWebSockets.cmake)
+include(${CMAKE_SOURCE_DIR}/deps/json.cmake)
 
 add_library(core STATIC
-    ${CMAKE_SOURCE_DIR}/src/core.hpp
-    ${CMAKE_SOURCE_DIR}/src/core.cpp
+    ${CMAKE_SOURCE_DIR}/src/PID.hpp
+    ${CMAKE_SOURCE_DIR}/src/PID.cpp
     )
 
 target_include_directories(core
@@ -11,7 +12,8 @@ target_include_directories(core
     )
 
 target_link_libraries(core PUBLIC
-    Eigen
+    libuWS
+    json
     )
 
 if (DO_CLANG_TIDY)

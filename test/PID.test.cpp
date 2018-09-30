@@ -1,10 +1,9 @@
 #include <test.hpp>
 
-#include <core.hpp>
+#include <PID.hpp>
 
 #include <vector>
 
 TEST(Core, BasicTest) {
-    Core core;
     ASSERT_TRUE(true);
 }

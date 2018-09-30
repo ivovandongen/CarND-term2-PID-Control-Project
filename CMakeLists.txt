@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(TEMPLATE)
+project(PID)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -45,11 +45,11 @@ add_subdirectory(src)
 
 # Main executable
 
-add_executable(Template
+add_executable(pid
     ${CMAKE_SOURCE_DIR}/src/main.cpp
     )
 
-target_link_libraries(Template core)
+target_link_libraries(pid core)
 
 
 # Tests
