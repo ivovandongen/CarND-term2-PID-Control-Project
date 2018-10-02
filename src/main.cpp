@@ -178,10 +178,10 @@ int main(int argc, char **argv) {
         std::cout << "Best params: " << bestParams[0] << " " << bestParams[1] << " " << bestParams[2] << std::endl;
     } else {
         // Manually tuned parameters
-        run({.1, .001, 3}, totalError);
+//        run({.1, .001, 3}, totalError);
 
         // Twiddle optimized
-//        run({0.45988, 0.00323188, 14.2266}, totalError);
+        run({0.45988, 0.00323188, 14.2266}, totalError);
     }
     std::cout << std::endl << "=========" << std::endl;
     std::cout << std::endl << "Total error: " << totalError << std::endl;
