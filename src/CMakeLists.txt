@@ -3,6 +3,7 @@ include(${CMAKE_SOURCE_DIR}/deps/uWebSockets.cmake)
 include(${CMAKE_SOURCE_DIR}/deps/json.cmake)
 
 add_library(core STATIC
+    ${CMAKE_SOURCE_DIR}/src/twiddle.hpp
     ${CMAKE_SOURCE_DIR}/src/PID.hpp
     ${CMAKE_SOURCE_DIR}/src/PID.cpp
     )
