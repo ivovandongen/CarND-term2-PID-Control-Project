@@ -89,8 +89,8 @@ int run(const std::array<double, 3> &p, double &errorOut, int maxRuns = -1) {
                     // - only start actively breaking over 20 mph to avoid going backwards (speed is always positive)
                     // - reduce throttle with greater steering angles over 20 mph to avoid
                     //   losing control
-                    double throttle = std::max<double>(speed > 20 ? -1 : 0,
-                                                       speed > 20 ? 1 - (speed / 60.0 * std::abs(steer_value) * 5) : 1);
+                    double throttle = std::max<double>(speed > 10 ? -1 : 0,
+                                                       speed > 10 ? 1 - (speed / 60.0 * std::abs(steer_value) * 5) : 1);
 
                     // DEBUG
                     if (maxRuns < 0) {
